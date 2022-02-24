@@ -1,8 +1,16 @@
+//discriminating unions, recommended approach for typing reducer functions
+
 export type CounterState = {
     count: number;
 }
 
-export type CounterAction = {
-    type:string;
+export type UpdateAction = {
+    type:"increment"|"decrement";
     payload:number;
 }
+
+export type ResetAction = {
+    type:"reset";
+}
+
+export type CounterAction = UpdateAction | ResetAction;
