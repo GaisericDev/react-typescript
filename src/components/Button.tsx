@@ -1,8 +1,4 @@
-import React from "react"
-
-type ButtonProps = {
-    handleClick: (event: React.MouseEvent<HTMLButtonElement>, id:number) => void;
-}
+import { ButtonProps } from "./Button.types";
 
 export const Button = (props:ButtonProps) => {
     return (
